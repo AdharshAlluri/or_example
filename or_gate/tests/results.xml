@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1699342004" />
+    <testcase name="or_test" classname="ifc_test" file="/home/adharsh/vip/tests/ifc_test.py" lineno="10" time="6389.8616762161255" sim_time_ns="301968607.0" ratio_time="47257.4559984554">
+      <failure message="Test failed with RANDOM_SEED=1699342004" />
+    </testcase>
+  </testsuite>
+</testsuites>
