@@ -40,7 +40,7 @@ class InputDriver(BusDriver):
         self.bus.en.value=0
         self.clk=clk
     async def _driver_send(self,value,sync=True):
-        if self.bus.rdy!=1:
+        if self.bus.rdy.value!=1:
             await RisingEdge(self.bus.rdy)
         self.bus.en.value=1
         self.bus.data.value=value
@@ -64,7 +64,7 @@ class OutputDriver(BusDriver):
         
     async def _driver_Send(self,value,sync=True):
         while True:
-            if self.bus.rdy!=1:
+            if self.bus.rdy.value!=1:
                 await RisingEdge(self.bus.rdy)
             #self.bus.en.value=1
             self.bus.data.value=value
