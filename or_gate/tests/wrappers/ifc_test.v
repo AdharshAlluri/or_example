@@ -42,7 +42,7 @@ ifc_or dut(CLK,
 	       
 	       initial begin
 	       		$dumpfile("ifc.vcd");
-	       		//$dumpvars;
+	       		$dumpvars;
 	       		CLK=0;
 	       		
 	       		forever begin 
