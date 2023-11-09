@@ -9,8 +9,8 @@ module ifc_test(CLK,
 	       b_en,
 	       b_rdy,
 	       
-	       y_data,
 	       y_en,
+	       y_data,
 	       y_rdy);
 	       
 input RST_N;
