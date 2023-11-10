@@ -36,8 +36,8 @@ ifc_or dut(CLK,
 	       b_data,
 	       b_en,
 	       b_rdy,
-	       y_data,
 	       y_en,
+	       y_data,
 	       y_rdy);
 	       
 	       initial begin
