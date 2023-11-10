@@ -29,8 +29,8 @@ async def ifc_test(dut):
     for i in range(4):
         adrv.append(a[i])
         bdrv.append(b[i])
-        while len(expected_value) > 0:
-            await Timer(2, 'ns')
+    while len(expected_value) > 0:
+        await Timer(2, 'ns')
 
 
 class InputDriver(BusDriver):
@@ -68,12 +68,11 @@ class OutputDriver(BusDriver):
             if self.bus.rdy.value != 1:
                 await RisingEdge(self.bus.rdy)
             self.bus.en.value = 1
-            self.bus.data.value = value
             await ReadOnly()  # waiting for delta delay of logic
             self.callback(self.bus.data.value)
             await RisingEdge(self.clk)  # and wait for rising edge
             await NextTimeStep()
             self.bus.en.value = 0
-        
+
         
         
